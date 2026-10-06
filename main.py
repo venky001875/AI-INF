@@ -18,9 +18,7 @@ llm = ChatGroq(
 )
 
 
-# ==============================
-# Data Model
-# ==============================
+
 
 class Influencer(BaseModel):
     name: Optional[str] = None
@@ -127,9 +125,7 @@ def _parse_ai_response(response):
     raise ValueError("Groq response did not contain valid JSON.")
 
 
-# ==============================
-# Influencer Search
-# ==============================
+
 
 def influencer_search(category, location, platform, number):
     try:

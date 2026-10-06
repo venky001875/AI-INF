@@ -6,9 +6,7 @@ from langchain.tools import tool
 from langchain_community.tools import DuckDuckGoSearchRun
 
 
-# =========================================================
-# DuckDuckGo Search
-# =========================================================
+
 
 search = DuckDuckGoSearchRun()
 
@@ -28,9 +26,7 @@ def search_tool(query: str) -> str:
         return f"Web search failed: {str(e)}"
 
 
-# =========================================================
-# Wikipedia Search
-# =========================================================
+
 
 @tool
 def wiki_tool(query: str) -> str:
@@ -154,9 +150,6 @@ def wiki_tool(query: str) -> str:
         )
 
 
-# =========================================================
-# Save Tool
-# =========================================================
 
 @tool
 def save_tool(data: str) -> str:

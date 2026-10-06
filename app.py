@@ -13,9 +13,7 @@ st.set_page_config(
 )
 
 
-# =========================
-# Session State
-# =========================
+
 
 if "influencers" not in st.session_state:
     st.session_state.influencers = []
@@ -24,9 +22,7 @@ if "search_error" not in st.session_state:
     st.session_state.search_error = None
 
 
-# =========================
-# Header
-# =========================
+
 
 st.title("🔎 AI Influencer Research Agent")
 
@@ -36,9 +32,7 @@ st.write(
 )
 
 
-# =========================
-# Search Inputs
-# =========================
+
 
 st.subheader("Find Influencers")
 
@@ -74,9 +68,7 @@ with col4:
     )
 
 
-# =========================
-# Search
-# =========================
+
 
 if st.button(
     "🔍 Find Influencers",
@@ -125,17 +117,12 @@ if st.button(
             st.session_state.search_error = str(e)
 
 
-# =========================
-# Error
-# =========================
 
 if st.session_state.search_error:
     st.error(st.session_state.search_error)
 
 
-# =========================
-# Results
-# =========================
+
 
 influencers = st.session_state.influencers
 
@@ -182,9 +169,7 @@ if influencers:
     )
 
 
-    # =========================
-    # Details + CRM
-    # =========================
+    
 
     st.subheader("Influencer Details")
 
@@ -254,9 +239,7 @@ if influencers:
                 st.success(f"{name} added to CRM!")
 
 
-# =========================
-# CRM
-# =========================
+
 
 st.divider()
 
@@ -301,9 +284,7 @@ else:
     st.info("CRM is empty.")
 
 
-# =========================
-# No Results
-# =========================
+
 
 if not influencers and not st.session_state.search_error:
 
