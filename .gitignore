@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.pyc
+.env
+influencers.db
+research_output.txt
